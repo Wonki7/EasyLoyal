@@ -1,0 +1,18 @@
+databaseChangeLog:
+- changeSet:
+    id: 202506112205
+    author: damir.razakov
+    changes:
+      - createTable:
+          columns:
+            - column:
+                constraints:
+                  nullable: false
+                  primaryKey: true
+                  primaryKeyName: rolePK
+                name: id
+                type: BIGINT
+            -  column:
+                name:  role_name
+                type:  varchar(255)
+          tableName: role
